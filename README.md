@@ -24,7 +24,7 @@ This project is a simplified version of a learning platform similar to Memrise. 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/memrise_clone.git
+git clone https://github.com/FDorj/memrise_clone.git
 cd memrise_clone
 ```
 
