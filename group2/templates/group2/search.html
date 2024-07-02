@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Lesson</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search for a Lesson</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="keyword" placeholder="Enter keyword">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

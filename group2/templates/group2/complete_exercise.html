@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Complete Exercise</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Exercise: {{ exercise.question }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="answer" placeholder="Your answer">
+            <button type="submit">Submit</button>
+        </form>
+        <p class="feedback">{{ feedback }}</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results</h1>
+        <ul>
+            {% for lesson in results %}
+            <li><a href="{% url 'view_lesson' lesson.id %}">{{ lesson.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

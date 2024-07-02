@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Review Progress</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Progress Summary</h1>
+        <p>Completed Lessons: {{ summary.completed_lessons }}</p>
+        <p>Total Score: {{ summary.total_score }}</p>
+        <h2>Detailed Statistics</h2>
+        <ul>
+            {% for stat in detailed_stats %}
+            <li>{{ stat.lesson__title }}: {{ stat.score }} ({{ stat.completion_date }})</li>
+            {% endfor %}
+        </ul>
+        <h2>Recommendations</h2>
+        <ul>
+            {% for lesson in recommendations %}
+            <li><a href="{% url 'view_lesson' lesson.id %}">{{ lesson.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ lesson.title }}</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>{{ lesson.title }}</h1>
+        <div class="center">
+            <p>{{ lesson.content }}</p>
+        </div>
+        <h2>Exercises</h2>
+        <div class="center">
+            <ul>
+                {% for exercise in exercises %}
+                <li><a href="{% url 'complete_exercise' exercise.id %}">{{ exercise.question }}</a></li>
+                {% empty %}
+                <li>No exercises available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
